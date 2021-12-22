@@ -1,6 +1,8 @@
 # SCHOOLBOARD - PCTO
 
-Nome del team: **SchoolBoard**
+Nome del team: **SchoolBoard** 
+
+[![Foo](https://img.shields.io/badge/Kanban-schoolboard%2Fprojects%2F1-green)](https://github.com/isdimaggio/schoolboard/projects/1)
 
 ## Ruoli:
 Responsabile:
