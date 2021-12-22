@@ -23,7 +23,7 @@ Team di sviluppo:
 - Portale studentesco con diverse funzioni, quali:
   - Chat fra studenti
   - Forum
-  - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…) (forse)
+  - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…)
  
 ## Norme di comportamento 
 Cadenza di incontri: 2 a settimana.
