@@ -43,4 +43,4 @@ democratica (alzata di mano)
 La parola si ottiene tramite alzata di mano e a concederla saranno il
 facilitatore e/o il responsabile
 - Contribuisci attivamente al progetto
-- Rispetta l'accordo di riservatezza interno
+- Non diffondere le idee del gruppo altrove
