@@ -25,8 +25,7 @@ Team di sviluppo:
 - Portale studentesco con diverse funzioni, quali:
   - Chat fra studenti
   - Forum
-  - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…)
- 
+  - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…
 ## Norme di comportamento 
 Cadenza di incontri: 2 a settimana.
 
@@ -41,5 +40,7 @@ democratica (alzata di mano)
 - non usare il gruppo discord per motivi personali ma solo per motivi
 "lavorativi"
 - Rispetta e sarai rispettato!
-- La parola si ottiene tramite alzata di mano e a concederla saranno il
+La parola si ottiene tramite alzata di mano e a concederla saranno il
 facilitatore e/o il responsabile
+- Contribuisci attivamente al progetto
+- Rispetta l'accordo di riservatezza interno
