@@ -13,7 +13,6 @@ Facilitatore:
 
 Team di sviluppo:
 - Vittorio Lo Mele (programmatore backend)
-- Adriano Catuogno (programmatore frontend)
 - Loris Lurdo (programmatore frontend)
 - Mattia Siena (programmatore frontend)
 - Daniele Genovese (web designer)
