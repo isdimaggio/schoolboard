@@ -25,6 +25,9 @@ Team di sviluppo:
   - Chat fra studenti
   - Forum
   - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…
+  - Pubblicazione di foto inerenti l'ambiente scolastico
+  - Ask&Answer
+  - Avvisi Scolastici
 ## Norme di comportamento 
 Cadenza di incontri: 2 a settimana.
 
