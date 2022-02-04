@@ -21,13 +21,11 @@ Team di sviluppo:
 
 ## Idee progetto:
 - School board
-- Portale studentesco con diverse funzioni, quali:
-  - Chat fra studenti
-  - Forum
-  - Marketplace (corsi di ripetizione, libri usati, appunti, ecc…
-  - Pubblicazione di foto inerenti l'ambiente scolastico
-  - Ask&Answer
-  - Avvisi Scolastici
+- Piattaforma All-in-One e Open Source, con funzione di:
+  - Registro Elettronico
+  - LMS (E-Learning)
+  - Engine di Gestione Orari Scolastici
+  - Piattaforma di Video Meeting (grazie a jitsi meet)
 ## Norme di comportamento 
 Cadenza di incontri: 2 a settimana.
 
