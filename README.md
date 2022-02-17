@@ -1,46 +1,24 @@
-# SCHOOLBOARD - PCTO
+# SCHOOLBOARD - SCHOOLBOARD360
 
-Nome del team: **SchoolBoard** 
+<!-- [![Foo](https://img.shields.io/badge/Kanban-schoolboard%2Fprojects%2F1-green)](https://github.com/isdimaggio/schoolboard/projects/1) -->
 
-[![Foo](https://img.shields.io/badge/Kanban-schoolboard%2Fprojects%2F1-green)](https://github.com/isdimaggio/schoolboard/projects/1)
+### Benvenuti sulla repo ufficiale di SchooBoard360
 
-## Ruoli:
-Responsabile:
-- Michele Sacco  
+D: Cos'è **SchoolBoard360**? <br>
+R: SchoolBoard360 è una piattaforma All-In-One e open source nata, da un'idea di alcuni studenti dell'IT "Luigi di Maggio", per semplificare le attività quotidiane alla quale        ormai tutti i docenti e gli studenti devono adempiere. <br>
+   Le funzioni di SchoolBoard360 sono: <br>
+    - Registro Elettronico (SIS - Sistema Informativo Scolastico) <br>
+    - LMS (Piattaforma E-Learning) <br>
+    - Engine di Gestione Orari Scolastici integrato ed automatizzato <br>
+    - Piattaforma di Video Meeting (Engine: Jitsi Meet) <br>
 
-Facilitatore:
-- Antonio Romito   
+D: Come posso scaricare **SchoolBoard360**? <br>
+R: Al momento SchoolBoard360 è in fase di sviluppo e non esistono release pubbliche e pronte per l'installazione <br>
+   Continua a seguirci attraverso il nostro Sito Web (www.schoolboard.it) o via GitHub per ricevere notizie aggiuntive! <br>
 
-Team di sviluppo:
-- Vittorio Lo Mele (programmatore backend)
-- Loris Lurdo (programmatore frontend)
-- Mattia Siena (programmatore frontend)
-- Daniele Genovese (web designer)
-- Francesco Spagnuolo (web designer)
-- Antonello Vinciguerra (graphic designer)
-
-## Idee progetto:
-- School board
-- Piattaforma All-in-One e Open Source, con funzione di:
-  - Registro Elettronico
-  - LMS (E-Learning)
-  - Engine di Gestione Orari Scolastici
-  - Piattaforma di Video Meeting (grazie a jitsi meet)
-## Norme di comportamento 
-Cadenza di incontri: 2 a settimana.
-
-Metodo di incontro: webmeeting (tramite gruppo discord).
-
-## Regole di buona condotta
-- essere puntuali agli incontri
-- ognuno deve rispettare i propri ruoli, ma essere aperto alla job rotation
-qualora fosse necessario
-- le idee e i progetti verranno considerati e approvati tramite votazione
-democratica (alzata di mano)
-- non usare il gruppo discord per motivi personali ma solo per motivi
-"lavorativi"
-- Rispetta e sarai rispettato!
-La parola si ottiene tramite alzata di mano e a concederla saranno il
-facilitatore e/o il responsabile
-- Contribuisci attivamente al progetto
-- Non diffondere le idee del gruppo altrove
+D: Come posso contattare il team di **SchoolBoard360**? <br>
+R: In base all'oggetto delle tue richieste, abbiamo a disposizione diverse modalità di contatto:
+  - Per Informazioni Generali    | Attraverso il Form sul Nostro Sito Web (www.schoolboard.it) <br>
+  - Per Informazioni Generali    | Attraverso l'indirizzo email info@schoolboard.it con oggetto "Informazioni" <br>
+  - Per Informazioni Commerciali | Attraverso l'indirizzo email info@schoolboard.it con oggetto "Commerciale" <br>
+  - Per contattare il Team di Sviluppo      | Attraverso l'indirizzo email sviluppo@schoolboard.it <br>
