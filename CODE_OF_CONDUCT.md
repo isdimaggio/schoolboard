@@ -70,6 +70,6 @@ Qualsiasi segnalazione senza suddette prove non verrà considerata, per evitare 
 
 ## 8. Contact info
 
-Se desideri contattare il team di SchoolBoard puoi farlo via mail, all'indirizzo `sviluppo@schoolboard.it` o attraverso la pagina Contatti del sito web `www.schoolboard.it`
+Se desideri contattare il team di SchoolBoard puoi farlo via mail, all'indirizzo `sviluppo@schoolboard.it` o attraverso la pagina Contatti del sito web `www.schoolboard.it/contatti`
 
-*Ringraziamo tutti coloro che rispettano gli altri e chi contribuisce attivamente nella community di SchoolBoard.*
+*Ringraziamo tutti coloro che rispettano gli altri e chi contribuisce attivamente nella community di SchoolBoard e li premiamo con un vantaggio esclusivo. Scrivici se reputi che un utente merita questa ricompensa*
