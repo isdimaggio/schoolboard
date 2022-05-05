@@ -1,6 +1,10 @@
-# SCHOOLBOARD
+# SchoolBoard
 
 <!-- [![Foo](https://img.shields.io/badge/Kanban-schoolboard%2Fprojects%2F1-green)](https://github.com/isdimaggio/schoolboard/projects/1) -->
+
+<p align="center">
+  <img src="https://www.schoolboard.it/wp-content/uploads/2022/05/github-sb-image.png">
+</p>
 
 ### Benvenuti sulla repo ufficiale di SchooBoard
 
@@ -10,7 +14,7 @@ R: SchoolBoard è una piattaforma All-In-One e open source nata, da un'idea di a
     - Registro Elettronico (SIS - Sistema Informativo Scolastico) <br>
     - LMS (Piattaforma E-Learning) <br>
     - Engine di Gestione Orari Scolastici integrato ed automatizzato <br>
-    - Piattaforma di Video Meeting (Engine: Jitsi Meet) <br>
+    - Piattaforma di Video Meeting (Engine: BigBlueButton) <br>
 
 D: Come posso scaricare **SchoolBoard**? <br>
 R: Al momento SchoolBoard è in fase di sviluppo e non esistono release pubbliche e pronte per l'installazione <br>
