@@ -23,6 +23,6 @@ R: Al momento SchoolBoard è in fase di sviluppo e non esistono release pubblich
 D: Come posso contattare il team di **SchoolBoard**? <br>
 R: In base all'oggetto delle tue richieste, abbiamo a disposizione diverse modalità di contatto:
   - Per Informazioni Generali    | Attraverso il Form sul Nostro Sito Web (www.schoolboard.it) <br>
-  - Per Informazioni Generali    | Attraverso l'indirizzo email info@schoolboard.it con oggetto "Informazioni" <br>
+  - Per Informazioni Generali    | Attraverso l'indirizzo email commerciale@schoolboard.it con oggetto "Informazioni" <br>
   - Per Informazioni Commerciali | Attraverso l'indirizzo email info@schoolboard.it con oggetto "Commerciale" <br>
   - Per contattare il Team di Sviluppo      | Attraverso l'indirizzo email sviluppo@schoolboard.it <br>
