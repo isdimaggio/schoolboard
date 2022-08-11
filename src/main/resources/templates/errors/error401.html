@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="general.html :: html-head (title='401 - Schoolboard')"> </head>
+
+<body>
+<h1 th:text="#{error.unauthorized.heading}"></h1>
+<p th:text="#{error.unauthorized.bottomtext}"></p>
+<a href="/" th:text="#{error.generic.button}"></a>
+</body>
+
+</html>

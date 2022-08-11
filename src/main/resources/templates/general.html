@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Head, MUST be included in all pages! -->
+    <head th:fragment="html-head (title)">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title th:text="${title}">SchoolBoard</title>
+
+        <link href="/webjars/bootstrap/5.2.0/dist/css/bootstrap.min.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/static/site.webmanifest">
+        <link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#d55bca">
+        <link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/static/browserconfig.xml">
+        <meta name="theme-color" content="#d55bca">
+    </head>
+
+    <!-- Scripts, MUST be included in all pages! -->
+    <div id="script-footer" th:fragment="html-scriptfooter">
+        <script src="/webjars/bootstrap/5.2.0/dist/js/bootstrap.min.js"></script>
+    </div>
+</html>

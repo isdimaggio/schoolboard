@@ -1,45 +1,42 @@
 package it.schoolboard.app.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import it.schoolboard.app.utility.SSOUser;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.view.RedirectView;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+// this controller handles all calls to the pages of the "portal"
+@Controller
 public class HomepageController {
-
-    private final HttpServletRequest request;
-
-    @Autowired
-    public HomepageController(HttpServletRequest request){
-        this.request = request;
-    }
-
     @GetMapping("/")
-    public String index(){
-        return "fai finta che sta la home di schoolboard <br>" +
+    @ResponseBody // respond with actual string
+    public String index()
+    {
+        // TODO: load actual homepage model
+        String a;
+
+        SSOUser user = new SSOUser(SecurityContextHolder.getContext());
+
+        if (user.isAuthenticated())
+        {
+            a = "SONO LOGGATO :)))) ";
+        }
+        else
+        {
+            a = "NON SONO LOGGATO :((((";
+        }
+        return "homepage <br>" +
                 "<a href='/login'>login</a> <br>" +
                 "<a href='/logout'>logout</a> <br>" +
-                "<a href='/test'>test</a> <br>";
+                "<a href='/test'>test</a> <br>" + a;
     }
 
+    // TODO: remove test method
     @GetMapping("/test")
-    public String test(){
-        return "SONO LOGGATO!!!! area privata!!!! <br> <a href='/'>home</a>";
+    @ResponseBody // respond with actual string
+    public String test()
+    {
+        return "area privata <br> <a href='/'>home</a>";
     }
-
-    @GetMapping("/login")
-    public RedirectView login() throws ServletException {
-        return new RedirectView("/");
-    }
-
-
-    @GetMapping("/logout")
-    public RedirectView logout() throws ServletException {
-        request.logout();
-        return new RedirectView("/");
-    }
-
 }
