@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general.html :: html-head (title = #{titles.portal.index} + ' - Schoolboard')">
+</head>
+
+<body>
+<link href="/static/css/portal.css" rel="stylesheet">
+<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username})"></nav>
+
+<main class="container">
+    <div class="row justify-content-center mt-8">
+        <div class="col col-md-auto">
+            <div class="card card-profile-selector">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="#{titles.portal.index}"></h5>
+
+                    content
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div th:insert="general.html :: common-scripts"></div>
+</body>
+</html>

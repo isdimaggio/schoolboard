@@ -12,20 +12,17 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 @Configuration
-public class WebMvcConfig implements WebMvcConfigurer
-{
+public class WebMvcConfig implements WebMvcConfigurer {
 
     // adds the locale interceptor bean to the interceptor registry
     @Override
-    public void addInterceptors(InterceptorRegistry registry)
-    {
+    public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
     }
 
     // resolves locale
     @Bean
-    public LocaleResolver localeResolver()
-    {
+    public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
         slr.setDefaultLocale(Locale.ITALIAN);
         return slr;
@@ -33,8 +30,7 @@ public class WebMvcConfig implements WebMvcConfigurer
 
     // intercept locale changes and applies them
     @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor()
-    {
+    public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
         lci.setParamName("lang");
         return lci;

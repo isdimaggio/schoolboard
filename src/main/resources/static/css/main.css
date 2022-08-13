@@ -1,0 +1,20 @@
+.bi {
+    position: relative;
+    bottom: 1px;
+    margin-right: 5px;
+}
+
+.profile-name {
+    color: #aaa;
+    line-height: 90%;
+}
+
+.del-margin {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 6px;
+}
+
+.mt-8 {
+    margin-top: 8%;
+}

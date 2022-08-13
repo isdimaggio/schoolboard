@@ -11,7 +11,7 @@
 	<groupId>it.schoolboard</groupId>
 	<artifactId>app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>app</name>
+	<name>SchoolBoard</name>
 	<description>SchoolBoard - Piattaforma All-In-One per le scuole italiane</description>
 	<properties>
 		<java.version>17</java.version>
@@ -30,6 +30,11 @@
 			<groupId>org.webjars.npm</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>5.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>bootstrap-icons</artifactId>
+			<version>1.9.1</version>
 		</dependency>
 
 		<dependency>
@@ -56,6 +61,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
 

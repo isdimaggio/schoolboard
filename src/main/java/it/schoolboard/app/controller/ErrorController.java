@@ -17,15 +17,13 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());
 
-            if(statusCode == HttpStatus.NOT_FOUND.value()) {
+            if (statusCode == HttpStatus.NOT_FOUND.value()) {
                 return "errors/error404";
             }
 
-            if(statusCode == HttpStatus.UNAUTHORIZED.value()) {
+            if (statusCode == HttpStatus.UNAUTHORIZED.value()) {
                 return "errors/error401";
-            }
-
-            else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
+            } else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
                 return "errors/error500";
             }
         }
