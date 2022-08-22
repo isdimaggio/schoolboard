@@ -9,11 +9,23 @@ public class SSOUser {
     private final SecurityContext securityContext;
     private final boolean isAuthenticated;
     private final String username;
+    private final String fullName;
 
-    public SSOUser(org.springframework.security.core.context.SecurityContext securityContext) {
+    private final AccessToken accessToken;
+
+    public SSOUser(SecurityContext securityContext) {
         this.securityContext = securityContext;
         this.isAuthenticated = SBAuthChecker.checkRole(securityContext);
         this.username = securityContext.getAuthentication().getPrincipal().toString();
+
+        if (isAuthenticated) {
+            SimpleKeycloakAccount authDetails = (SimpleKeycloakAccount) securityContext.getAuthentication().getDetails();
+            this.accessToken = authDetails.getKeycloakSecurityContext().getToken();
+            this.fullName = accessToken.getName();
+        } else {
+            this.accessToken = null;
+            this.fullName = null;
+        }
     }
 
     public Authentication getAuthentication() {
@@ -42,11 +54,10 @@ public class SSOUser {
     }
 
     public AccessToken getAccessTokenContent() {
-        if (isAuthenticated) {
-            SimpleKeycloakAccount authDetails = (SimpleKeycloakAccount) securityContext.getAuthentication().getDetails();
-            return authDetails.getKeycloakSecurityContext().getToken();
-        } else {
-            return null;
-        }
+        return accessToken;
+    }
+
+    public String getFullName() {
+        return fullName;
     }
 }

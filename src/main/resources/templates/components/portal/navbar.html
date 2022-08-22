@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <!-- common navbar for portal pages -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:fragment="navbar(isAuthenticated, username)">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:fragment="navbar(isAuthenticated, username, fullName)">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img alt="SchoolBoard logo square white" src="/static/img/sblogo-bar.png"/>
@@ -28,9 +28,26 @@
                        data-bs-toggle="dropdown" href="#">
                         <img alt="" class="rounded-circle me-2" height="32" src="/static/img/default-avatar.svg"
                              width="32"/>
-                        <strong th:text="${username}"></strong>
+                        <div th:if="${fullName == null}">
+                            <strong th:text="${username}"></strong>
+                        </div>
+                        <div th:unless="${fullName == null}">
+                            <strong th:text="${fullName}"></strong>
+                        </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end text-small shadow">
+                        <div th:if="${fullName != null}">
+                            <li>
+                                <a class="dropdown-item disabled" href="#" th:inline="text">
+                                    <i class="bi bi-person"></i>
+                                    [[${username}]]
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider"/>
+                            </li>
+                        </div>
+
                         <li>
                             <a class="dropdown-item" target="_blank" th:href="#{account_dropdown.docs_link.content}"
                                th:inline="text">
@@ -40,7 +57,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="/ssoSettings" th:inline="text">
-                                <i class="bi bi-person"></i>
+                                <i class="bi bi-gear"></i>
                                 [[#{account_dropdown.account_settings}]]
                             </a>
                         </li>
