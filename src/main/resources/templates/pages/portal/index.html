@@ -8,12 +8,16 @@
 <link href="/static/css/portal.css" rel="stylesheet">
 <nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName})"></nav>
 
-<main class="container">
+<main class="public-content" th:if="${!user.isAuthenticated}">
+    contenuto pubblico
+</main>
+
+<main class="container" th:if="${user.isAuthenticated}">
     <div class="row justify-content-center mt-8">
         <div class="col col-md-auto">
             <div class="card card-profile-selector">
                 <div class="card-body">
-                    <h5 class="card-title" th:text="#{titles.portal.index}"></h5>
+                    <h5 class="card-title" th:text="#{pages.portal.index.select-profile}"></h5>
 
                     content
 

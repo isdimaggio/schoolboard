@@ -15,10 +15,34 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item" th:if="${isAuthenticated}">
-                    <a class="nav-link" href="/changeAvatar" th:text="#{portal.menu.change-avatar}"></a>
+                    <a class="nav-link" href="/changeAvatar"
+                       th:classappend="${#httpServletRequest.requestURI == '/changeAvatar' ? 'active' : ''}"
+                       th:text="#{portal.menu.change-avatar}"
+                    ></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/credits" th:text="#{portal.menu.credits}"></a>
+                    <a class="nav-link" href="/info/legalNotes"
+                       th:classappend="${#httpServletRequest.requestURI == '/info/legalNotes' ? 'active' : ''}"
+                       th:text="#{portal.menu.legal-notes}"
+                    ></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info/privacy"
+                       th:classappend="${#httpServletRequest.requestURI == '/info/privacy' ? 'active' : ''}"
+                       th:text="#{portal.menu.privacy-policy}"
+                    ></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info/cookies"
+                       th:classappend="${#httpServletRequest.requestURI == '/info/cookies' ? 'active' : ''}"
+                       th:text="#{portal.menu.cookie-policy}"
+                    ></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info/credits"
+                       th:classappend="${#httpServletRequest.requestURI == '/info/credits' ? 'active' : ''}"
+                       th:text="#{portal.menu.credits}"
+                    ></a>
                 </li>
             </ul>
             <div class="d-flex" th:if="${isAuthenticated}">

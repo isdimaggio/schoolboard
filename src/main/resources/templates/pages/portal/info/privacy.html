@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general.html :: html-head (title = #{titles.portal.privacy} + ' - Schoolboard')">
+</head>
+
+<body>
+<link href="/static/css/portal.css" rel="stylesheet">
+<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName})"></nav>
+
+<main class="">
+    pagina privacy
+</main>
+
+<div th:insert="general.html :: common-scripts"></div>
+</body>
+</html>

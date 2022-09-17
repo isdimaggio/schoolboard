@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general.html :: html-head (title = #{titles.portal.credits} + ' - Schoolboard')">
+</head>
+
+<body>
+<link href="/static/css/portal.css" rel="stylesheet">
+<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName})"></nav>
+
+<main class="container">
+    <div class="row justify-content-center mt-8">
+        <div class="col col-md-auto text-center">
+            <img alt="Schoolboard losgo" src="/static/img/credits.png">
+            <h4 th:text="${buildProp.getName()}"></h4>
+            <span>ver. <b th:text="${buildProp.getVersion()}"></b></span>
+            <span>built on <b th:text="${buildProp.getTime()}"></b></span>
+
+            <!-- TOOD: Finire crediti -->
+
+        </div>
+    </div>
+</main>
+
+<div th:insert="general.html :: common-scripts"></div>
+</body>
+</html>
