@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="general.html :: html-head (title = #{titles.portal.credits} + ' - Schoolboard')">
 </head>
@@ -11,14 +11,28 @@
 <main class="container">
     <div class="row justify-content-center mt-8">
         <div class="col col-md-auto text-center">
-            <img alt="Schoolboard losgo" src="/static/img/credits.png">
+            <img alt="Schoolboard logo" src="/static/img/credits.png" height="180px">
             <h4 th:text="${buildProp.getName()}"></h4>
             <span>ver. <b th:text="${buildProp.getVersion()}"></b></span>
-            <span>built on <b th:text="${buildProp.getTime()}"></b></span>
-
-            <!-- TOOD: Finire crediti -->
-
+            <span>built on <b th:text="${buildProp.getTime()}"></b></span> <br>
+            <span>
+                <a class="link-credits" target=”_blank” href="https://www.schoolboard.it">WEBSITE</a> -
+                <a class="link-credits" target=”_blank” href="https://www.github.com/isdimaggio/schoolboard">GITHUB</a> -
+                <a class="link-credits" target=”_blank” href="mailto:helpdesk@flowopia.com">Contatta il supporto</a>
+            </span>
         </div>
+    </div>
+
+    <div class="container fixed-bottom">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2022 SchoolBoard</p>
+            <a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="/static/img/flowopia-credits.svg" alt="SchoolBoard" class="bi me-2" height="40">
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a target=”_blank” href="https://www.flowopia.com" class="nav-link px-2 text-muted">Flowopia Network</a></li>
+            </ul>
+        </footer>
     </div>
 </main>
 

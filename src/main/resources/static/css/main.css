@@ -18,3 +18,23 @@
 .mt-8 {
     margin-top: 8%;
 }
+
+.link-credits:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-credits:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-credits:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.link-credits:active {
+    text-decoration: underline;
+    font-weight: bold;
+}
