@@ -26,3 +26,5 @@ R: In base all'oggetto delle tue richieste, abbiamo a disposizione diverse modal
   - Per Informazioni Generali    | Attraverso l'indirizzo email info@schoolboard.it con oggetto "Informazioni" <br>
   - Per Informazioni Commerciali | Attraverso l'indirizzo email commerciale@schoolboard.it <br>
   - Per contattare il Team di Sviluppo      | Attraverso l'indirizzo email sviluppo@schoolboard.it <br>
+  
+  > SchoolBoard è un progetto *Made in **[Flowopia Network](https://www.flowopia.com)***
