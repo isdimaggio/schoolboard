@@ -15,11 +15,104 @@
 <main class="container" th:if="${user.isAuthenticated}">
     <div class="row justify-content-center mt-8">
         <div class="col col-md-auto">
+
+            <div class="card card-profile-selector">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Anno scolastico
+                    </h5>
+                    <!-- MOCKUP INIZIO -->
+                    <select aria-label="Default select example" class="form-select">
+                        <option selected>2022 / 2023</option>
+                        <option value="1">2021 / 2022</option>
+                        <option value="2">2020 / 2021</option>
+                    </select>
+                    <!-- MOCKUP FINE -->
+                </div>
+            </div>
+
             <div class="card card-profile-selector">
                 <div class="card-body">
                     <h5 class="card-title" th:text="#{pages.portal.index.select-profile}"></h5>
 
-                    content
+                    <!-- MOCKUP INIZIO -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col col-md-auto">
+                                    <img alt="admin square icon" class="ps-square-icons"
+                                         height="40" src="/static/img/square-icons/admin.png" width="40"/>
+                                </div>
+
+                                <div class="col" style="padding-left: 0px">
+                                    <p class="ps-del-margin">
+                                        <input class="form-control alias-selector" placeholder="Alias" type="text">
+                                    </p>
+                                </div>
+
+                                <div class="col col-md-auto text-center">
+                                    <button class="btn btn-light" type="button">
+                                        <i class="bi bi-arrow-left-right mr-0"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col col-md-auto">
+                                    <img alt="admin square icon" class="ps-square-icons"
+                                         height="40" src="/static/img/square-icons/admin.png" width="40"/>
+                                </div>
+
+                                <div class="col" style="padding-left: 0px">
+                                    <p class="ps-del-margin-st">
+                                        <span class="fs-5">Console Amministrazione</span>
+                                    </p>
+                                </div>
+
+                                <div class="col col-md-auto text-center">
+                                    <button class="btn btn-light" type="button">
+                                        <i class="bi bi-arrow-left-right mr-0"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col col-md-auto">
+                                    <img alt="admin square icon" class="ps-square-icons"
+                                         height="40" src="/static/img/square-icons/admin.png" width="40"/>
+                                </div>
+
+                                <div class="col pl-0">
+                                    <p class="ps-title del-margin">
+                                        <span class="fs-5">Docente</span>
+                                        <br/>
+                                        <span class="fs-7 ps-subtitle">
+                                                <i class="bi bi-bank2"></i>
+                                                IT 'Luigi Di Maggio'
+                                            </span>
+                                    </p>
+                                </div>
+
+                                <div class="col col-md-auto text-center">
+                                    <button class="btn btn-light" type="button">
+                                        <i class="bi bi-arrow-left-right mr-0"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- MOCKUP FINE -->
 
                 </div>
             </div>

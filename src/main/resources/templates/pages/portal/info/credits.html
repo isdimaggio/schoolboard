@@ -16,21 +16,31 @@
             <span>ver. <b th:text="${buildProp.getVersion()}"></b></span>
             <span>built on <b th:text="${buildProp.getTime()}"></b></span> <br>
             <span>
-                <a class="link-credits" target=”_blank” href="https://www.schoolboard.it">WEBSITE</a> -
-                <a class="link-credits" target=”_blank” href="https://www.github.com/isdimaggio/schoolboard">GITHUB</a> -
-                <a class="link-credits" target=”_blank” href="mailto:helpdesk@flowopia.com">Contatta il supporto</a>
+                <a class="link-credits" href="https://www.schoolboard.it" target=”_blank”
+                   th:text="#{pages.portal.info.credits.website}"></a> -
+                <a class="link-credits" href="https://www.github.com/isdimaggio/schoolboard" target=”_blank”>GitHub</a> -
+                <a class="link-credits" href="mailto:helpdesk@flowopia.com" target=”_blank”
+                   th:text="#{pages.portal.info.credits.support}"></a>
+            </span> <br/> <br/>
+            <span>
+                <a class="link-credits" href="https://www.gnu.org/licenses/agpl-3.0-standalone.html" target=”_blank”>
+                    <img alt="AGPLv3" src="/static/img/license.svg">
+                </a>
             </span>
         </div>
     </div>
 
     <div class="container fixed-bottom">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">© 2022 SchoolBoard</p>
+            <p class="col-md-4 mb-0 text-muted">
+                © 2022 Flowopia Network
+            </p>
             <a class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <img src="/static/img/flowopia-credits.svg" alt="SchoolBoard" class="bi me-2" height="40">
             </a>
             <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a target=”_blank” href="https://www.flowopia.com" class="nav-link px-2 text-muted">Flowopia Network</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://www.flowopia.com"
+                                        target=”_blank”>Flowopia Network</a></li>
             </ul>
         </footer>
     </div>
