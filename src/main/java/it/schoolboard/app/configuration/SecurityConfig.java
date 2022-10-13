@@ -63,7 +63,7 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .hasRole("schoolboard")
                 .antMatchers("/ssoSettings*")
                 .hasRole("schoolboard")
-                .antMatchers("/changeAvatar*")
+                .antMatchers("/api*")
                 .hasRole("schoolboard")
                 .anyRequest()
                 .permitAll();

@@ -24,6 +24,8 @@
 package it.schoolboard.app.utility;
 
 import io.minio.MinioClient;
+import io.minio.RemoveObjectArgs;
+import io.minio.UploadObjectArgs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -36,6 +38,8 @@ public class S3Client {
 
     private final String publicBucketName;
 
+    private final String endpoint;
+
     @Autowired
     public S3Client(
             @Value("${s3.endpoint}") String endpoint,
@@ -47,6 +51,7 @@ public class S3Client {
     ) {
         this.privateBucketName = privateBucketName;
         this.publicBucketName = publicBucketName;
+        this.endpoint = endpoint;
 
         s3Client = MinioClient.builder()
                 .endpoint(endpoint)
@@ -65,6 +70,61 @@ public class S3Client {
 
     public String getPublicBucketName() {
         return publicBucketName;
+    }
+
+    public String getPrivateBucketURI() {
+        return endpoint + "/" + privateBucketName + "/";
+    }
+
+    public String getPublicBucketURI() {
+        return endpoint + "/" + publicBucketName + "/";
+    }
+
+    public boolean uploadFile(
+            String tempFileName,
+            Boolean isPublic,
+            String objectPath
+    ) {
+        try {
+            String bucket;
+            if (isPublic) {
+                bucket = getPublicBucketName();
+            } else {
+                bucket = getPrivateBucketName();
+            }
+            s3Client.uploadObject(
+                    UploadObjectArgs.builder()
+                            .bucket(bucket)
+                            .object(objectPath)
+                            .filename(tempFileName)
+                            .build());
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean deleteFile(
+            boolean isPublicBucket,
+            String objectPath
+    ) {
+        try {
+            String bucket;
+            if (isPublicBucket) {
+                bucket = getPublicBucketName();
+            } else {
+                bucket = getPrivateBucketName();
+            }
+            s3Client.removeObject(
+                    RemoveObjectArgs.builder()
+                            .bucket(bucket)
+                            .object(objectPath)
+                            .build()
+            );
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
 }

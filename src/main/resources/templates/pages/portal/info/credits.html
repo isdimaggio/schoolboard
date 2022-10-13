@@ -5,10 +5,16 @@
 </head>
 
 <body>
+<script th:if="${user.isAuthenticated}" th:inline="text">
+    let CSRF_PARAM_NAME = "[[${_csrf.parameterName}]]";
+    let CSRF_TOKEN = "[[${_csrf.token}]]";
+</script>
 <link href="/static/css/portal.css" rel="stylesheet">
-<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName})"></nav>
+<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName}, ${ppUri})"></nav>
 
 <main class="container">
+    <div th:if="${user.isAuthenticated}" th:insert="components/portal/changePpModal.html :: changePpModal"></div>
+
     <div class="row justify-content-center mt-8">
         <div class="col col-md-auto text-center">
             <img alt="Schoolboard logo" src="/static/img/credits.png" height="180px">

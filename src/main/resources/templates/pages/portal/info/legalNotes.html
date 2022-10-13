@@ -5,10 +5,16 @@
 </head>
 
 <body>
+<script th:if="${user.isAuthenticated}" th:inline="text">
+    let CSRF_PARAM_NAME = "[[${_csrf.parameterName}]]";
+    let CSRF_TOKEN = "[[${_csrf.token}]]";
+</script>
 <link href="/static/css/portal.css" rel="stylesheet">
-<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName})"></nav>
+<nav th:insert="components/portal/navbar.html :: navbar (${user.isAuthenticated}, ${user.username}, ${user.fullName}, ${ppUri})"></nav>
 
 <main class="">
+    <div th:if="${user.isAuthenticated}" th:insert="components/portal/changePpModal.html :: changePpModal"></div>
+
     pagina note legali
 </main>
 

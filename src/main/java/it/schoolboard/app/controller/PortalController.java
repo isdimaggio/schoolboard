@@ -23,6 +23,9 @@
 
 package it.schoolboard.app.controller;
 
+import it.schoolboard.app.entity.ProfilePicture;
+import it.schoolboard.app.service.ProfilePictureService;
+import it.schoolboard.app.utility.S3Client;
 import it.schoolboard.app.utility.SSOUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
@@ -37,27 +40,25 @@ public class PortalController {
 
     @Autowired
     BuildProperties buildProperties;
+    @Autowired
+    ProfilePictureService profilePictureService;
+    @Autowired
+    S3Client s3Client;
 
     // homepage, contains the profile selector or the public content
     @GetMapping("/")
     public String index(Model model) {
         SSOUser user = new SSOUser(SecurityContextHolder.getContext());
         model.addAttribute("user", user);
+        model.addAttribute("ppUri", getProfilePictureURI(user));
         return "pages/portal/index";
-    }
-
-    // pages that changes the avatar of the user in the whole application
-    @GetMapping("/changeAvatar")
-    public String changeAvatar(Model model) {
-        SSOUser user = new SSOUser(SecurityContextHolder.getContext());
-        model.addAttribute("user", user);
-        return "pages/portal/changeAvatar";
     }
 
     @GetMapping("/info/privacy")
     public String privacyPolicy(Model model) {
         SSOUser user = new SSOUser(SecurityContextHolder.getContext());
         model.addAttribute("user", user);
+        model.addAttribute("ppUri", getProfilePictureURI(user));
         return "pages/portal/info/privacy";
     }
 
@@ -65,6 +66,7 @@ public class PortalController {
     public String legalNotes(Model model) {
         SSOUser user = new SSOUser(SecurityContextHolder.getContext());
         model.addAttribute("user", user);
+        model.addAttribute("ppUri", getProfilePictureURI(user));
         return "pages/portal/info/legalNotes";
     }
 
@@ -72,10 +74,21 @@ public class PortalController {
     public String credits(Model model) {
         SSOUser user = new SSOUser(SecurityContextHolder.getContext());
         model.addAttribute("user", user);
-
+        model.addAttribute("ppUri", getProfilePictureURI(user));
         // get software version / BUILD
         model.addAttribute("buildProp", buildProperties);
-
         return "pages/portal/info/credits";
+    }
+
+    public String getProfilePictureURI(SSOUser user) {
+        if (user.getAccessTokenContent() == null) return "/static/img/default-avatar.svg";
+        if (profilePictureService.exists(user.getAccessTokenContent().getSubject())) {
+            ProfilePicture profilePicture = profilePictureService.fetchProfilePicture(
+                    user.getAccessTokenContent().getSubject()
+            );
+            return s3Client.getPublicBucketURI() + profilePicture.getS3Location();
+        } else {
+            return "/static/img/default-avatar.svg";
+        }
     }
 }

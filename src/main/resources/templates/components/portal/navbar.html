@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <!-- common navbar for portal pages -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" th:fragment="navbar(isAuthenticated, username, fullName)">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"
+     th:fragment="navbar(isAuthenticated, username, fullName, propic)">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img alt="SchoolBoard logo square white" src="/static/img/sblogo-bar.png"/>
@@ -13,13 +14,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item" th:if="${isAuthenticated}">
-                    <a class="nav-link" href="/changeAvatar"
-                       th:classappend="${#httpServletRequest.requestURI == '/changeAvatar' ? 'active' : ''}"
-                       th:text="#{portal.menu.change-avatar}"
-                    ></a>
-                </li>
+            <ul class="navbar-nav me-auto mb-2 mb-md-0" th:if="${!isAuthenticated}">
                 <li class="nav-item">
                     <a class="nav-link" href="/info/legalNotes"
                        th:classappend="${#httpServletRequest.requestURI == '/info/legalNotes' ? 'active' : ''}"
@@ -39,12 +34,15 @@
                     ></a>
                 </li>
             </ul>
+
+            <ul class="navbar-nav me-auto mb-2 mb-md-0" th:if="${isAuthenticated}"></ul>
+
             <div class="d-flex" th:if="${isAuthenticated}">
                 <div class="dropdown">
                     <a aria-expanded="false"
                        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                        data-bs-toggle="dropdown" href="#">
-                        <img alt="" class="rounded-circle me-2" height="32" src="/static/img/default-avatar.svg"
+                        <img alt="" class="rounded-circle me-2" height="32" th:src="${propic}"
                              width="32"/>
                         <div th:if="${fullName == null}">
                             <strong th:text="${username}"></strong>
@@ -80,12 +78,42 @@
                             </a>
                         </li>
                         <li>
+                            <a class="dropdown-item" data-bs-target="#changePpModal" data-bs-toggle="modal"
+                               th:inline="text">
+                                <i class="bi bi-person-circle"></i>
+                                [[#{account_dropdown.change_avatar}]]
+                            </a>
+                        </li>
+                        <li>
                             <hr class="dropdown-divider"/>
                         </li>
                         <li>
                             <a class="dropdown-item" href="/logout" th:inline="text">
                                 <i class="bi bi-box-arrow-right"></i>
                                 [[#{account_dropdown.logout}]]
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider"/>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="/info/legalNotes" th:inline="text">
+                                <i class="bi bi-file-earmark-text"></i>
+                                [[#{portal.menu.legal-notes}]]
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/info/privacy" th:inline="text">
+                                <i class="bi bi-file-earmark-text"></i>
+                                [[#{portal.menu.privacy-policy}]]
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/info/credits" th:inline="text">
+                                <i class="bi bi-git"></i>
+                                [[#{portal.menu.credits}]]
                             </a>
                         </li>
                     </ul>
