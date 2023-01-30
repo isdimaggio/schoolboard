@@ -6,7 +6,7 @@
   <img src="https://www.schoolboard.it/wp-content/uploads/2022/05/github-sb-image.png">
 </p>
 
-### Benvenuti sulla repo ufficiale di SchooBoard
+### Benvenuti sulla repo ufficiale di SchoolBoard
 
 D: Cos'è **SchoolBoard**? <br>
 R: SchoolBoard è una piattaforma All-In-One e open source nata, da un'idea di alcuni studenti dell'IT "Luigi di Maggio", per semplificare le attività quotidiane alla quale        ormai tutti i docenti e gli studenti devono adempiere. <br>
