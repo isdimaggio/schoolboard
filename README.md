@@ -14,7 +14,7 @@ R: SchoolBoard è una piattaforma All-In-One e open source nata, da un'idea di a
     - Registro Elettronico (SIS - Sistema Informativo Scolastico) <br>
     - LMS (Piattaforma E-Learning) <br>
     - Engine di Gestione Orari Scolastici integrato ed automatizzato <br>
-    - Piattaforma di Video Meeting (Engine: BigBlueButton) <br>
+    - Hub SSO per l'accesso su diverse piattaforme <br>
 
 D: Come posso scaricare **SchoolBoard**? <br>
 R: Al momento SchoolBoard è in fase di sviluppo e non esistono release pubbliche e pronte per l'installazione <br>
